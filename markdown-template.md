@@ -33,3 +33,33 @@ title: Keep tables small
 | Dimension | Current | Target |
 |---|---:|---:|
 | Measure A | 40% | 60% |
+---
+type: three-column
+title: Compare three things
+::: column
+## First
+- Point
+::: column
+## Second
+- Point
+::: column
+## Third
+- Point
+---
+type: four-column
+title: Compare four things
+::: column
+## First
+- Point
+::: column
+## Second
+- Point
+::: column
+## Third
+- Point
+::: column
+## Fourth
+- Point
+---
+type: divider
+title: Section break

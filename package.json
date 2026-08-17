@@ -1,0 +1,1 @@
+{"name":"gartner-markdown-powerpoint","version":"1.0.0","private":true,"type":"commonjs","scripts":{"build":"node md2ppt.js sample-deck.md sample-deck.pptx"},"dependencies":{"pptxgenjs":"^3.12.0"}}

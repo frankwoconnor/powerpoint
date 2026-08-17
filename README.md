@@ -24,6 +24,33 @@ node md2ppt.js markdown-template.md output.pptx
 
 Supported layouts: `title`, `bullets`, `two-column`, `takeaway`, `table`. `three-column`/`four-column`/`divider` fall back to the plain bullets layout.
 
+## Markdown format
+
+A deck is a `markdown-template.md`-style file: `---`-separated sections. The first section (before any `type:` line) is deck-level metadata; every section after that is one slide.
+
+Deck metadata fields:
+
+| Field | Used by |
+|---|---|
+| `title` | Both — doc title / default title-slide title |
+| `subtitle` | Both — default title-slide subtitle |
+| `presenter` | Both — doc author |
+| `date` | Neither renders it on a slide; kept for author reference |
+| `classification` | md2ppt.js only, as a footer stamp per slide. md2ppt.py's layouts have no footer placeholder, so it's currently unused there. |
+
+Each slide section starts with `type:` (defaults to `bullets` if omitted), then `title:`, then a body whose shape depends on the type:
+
+| `type` | Body format |
+|---|---|
+| `title` | `subtitle:` field; falls back to deck `title`/`subtitle` if omitted |
+| `bullets` | `- ` / `* ` lines |
+| `two-column`, `three-column`, `four-column` | N `::: column` blocks, each starting with an optional `## Heading` line followed by `- ` bullets |
+| `table` | A GitHub-style pipe table (header row, `---` alignment row, data rows) |
+| `takeaway` | A single sentence — the body text |
+| `divider` | Title only, no body — section-break slide |
+
+`three-column`/`four-column`/`divider` are only fully rendered by `md2ppt.py`; `md2ppt.js` falls back to a plain bullets slide for them.
+
 ## Design rules
 
 - 16:9 slides with consistent margins

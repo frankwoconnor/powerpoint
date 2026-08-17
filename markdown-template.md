@@ -9,6 +9,9 @@ type: title
 title: Presentation title
 subtitle: A short subtitle
 ---
+type: divider
+title: Section one
+---
 type: bullets
 title: Use a conclusion-style title
 - Keep bullets concise
@@ -23,16 +26,6 @@ title: Compare two meaningful alternatives
 ::: column
 ## Right heading
 - First point
----
-type: takeaway
-title: Key takeaway
-One memorable sentence.
----
-type: table
-title: Keep tables small
-| Dimension | Current | Target |
-|---|---:|---:|
-| Measure A | 40% | 60% |
 ---
 type: three-column
 title: Compare three things
@@ -61,5 +54,12 @@ title: Compare four things
 ## Fourth
 - Point
 ---
-type: divider
-title: Section break
+type: table
+title: Keep tables small
+| Dimension | Current | Target |
+|---|---:|---:|
+| Measure A | 40% | 60% |
+---
+type: takeaway
+title: Key takeaway
+One memorable sentence.

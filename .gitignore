@@ -1,0 +1,4 @@
+node_modules/
+*.pptx
+!gartner_template.pptx
+.DS_Store
